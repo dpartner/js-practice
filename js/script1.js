@@ -1,5 +1,11 @@
-// 'use strict';
+const clients = ['Mango', 'Ajax', 'Poly'];
 
-const t = 90;
+for (const client of clients) {
+  console.log(client);
+}
 
-console.log(t);
+const string = 'javascript';
+
+for (const character of string) {
+  console.log(character);
+}
