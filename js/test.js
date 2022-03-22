@@ -1,11 +1,18 @@
-const article = document.querySelector('.article');
-console.log(article.innerHTML);
+const select = document.querySelector('.pizza-select');
+const textOutput = document.querySelector('.text-output');
+const valueOutput = document.querySelector('.value-output');
 
-// const title = document.querySelector('.article .title');
-// console.log(title.innerHTML);
+setOutput();
 
-// const text = document.querySelector('.article .text');
-// console.log(text.innerHTML);
+select.addEventListener('change', setOutput);
 
-// const link = document.querySelector('.article .link');
-// console.log(link.innerHTML);
+function setOutput() {
+  const selectedOptionValue = select.value;
+  const selectedOptionIndex = select.selectedIndex;
+  console.log(selectedOptionIndex);
+  const selectedOptionText = select.options[selectedOptionIndex].text;
+  console.log(select.options);
+
+  textOutput.textContent = selectedOptionText;
+  valueOutput.textContent = selectedOptionValue;
+}
